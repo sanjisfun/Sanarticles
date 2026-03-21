@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SanArticles — План восстановления</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.Css">
+</head>
+<body>
+  <div id="preloader" aria-hidden="true">
+    <div class="loader">
+      <svg viewBox="0 0 100 100" class="loader-ring"><circle cx="50" cy="50" r="36" stroke-linecap="round"></circle></svg>
+      <div class="loader-text">SanArticles</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">...</a>
+      <nav class="main-nav">
+        <a href="index.html">Обзор</a>
+        <a href="signs.html">Признаки</a>
+        <a href="plan.html">План</a>
+        <a href="resources.html">Советы</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container content" tabindex="-1">
+    <article class="article card">
+      <header class="article-header">
+        <h1>План восстановления: 30 дней маленьких шагов</h1>
+        <p class="lead">Минималистичный план, который не требует революции — только последовательности.</p>
+      </header>
+
+      <section class="section">
+        <h2>Неделя 1 — Безопасность и сон</h2>
+        <ul class="mini-plan">
+          <li>Фикс: уведомления — минимум ночью. 0:00–7:00 без уведомлений.</li>
+          <li>Ложитесь на 30 минут раньше. Тёмная комната, телефон вне спальни.</li>
+          <li>Запись: 1 строка перед сном — что сделал хорошо.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Неделя 2 — Тело и ритм</h2>
+        <ul class="mini-plan">
+          <li>Ежедневная 20‑минутная прогулка, желательно на свежем воздухе.</li>
+          <li>Простые растяжки утром — 5–10 минут.</li>
+          <li>Завтраки с белком: яйцо, творог или йогурт + фрукт.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Неделя 3 — Эмоции и границы</h2>
+        <ul class="mini-plan">
+          <li>Один разговор «по делу» с человеком, кто нагружает эмоционально.</li>
+          <li>«Команда нет» — практика вежливого отказа: 30 секунд, честно и прямо.</li>
+          <li>5‑минутный дневник: три вещи, которые доставили радость.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Неделя 4 — Долгосрочное</h2>
+        <ul class="mini-plan">
+          <li>Пересмотрите обязанности и делегируйте одну задачу.</li>
+          <li>Запланируйте регулярное хобби 2× в неделю.</li>
+          <li>Составьте «правила работы» и покажите их коллегам/домочадцам.</li>
+        </ul>
+      </section>
+
+      <section class="section closing">
+        <h2>Ещё советы</h2>
+        <ul class="bullets">
+          <li>Малые ритуалы важнее грандиозных планов.</li>
+          <li>Почти всегда лучше сделать чуть меньше, но регулярно.</li>
+          <li>Если становится хуже — обратитесь к специалисту.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> SanArticles</p></div></footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){ const pre=document.getElementById('preloader'), MIN=450, s=Date.now(); function hide(){const d=Math.max(0,MIN-(Date.now()-s)); setTimeout(()=>{pre.classList.add('hidden'); document.body.classList.add('loaded'); document.getElementById('content').focus();},d)} if(document.readyState==='complete') hide(); else window.addEventListener('load',hide) })();
+  </script>
+</body>
+</html>
