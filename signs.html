@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SanArticles — Признаки выгорания</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.Css">
+</head>
+<body>
+  <div id="preloader" aria-hidden="true">
+    <div class="loader">
+      <svg viewBox="0 0 100 100" class="loader-ring"><circle cx="50" cy="50" r="36" stroke-linecap="round"></circle></svg>
+      <div class="loader-text">SanArticles</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Главная">...<!-- same SVG and brand text as index --></a>
+      <nav class="main-nav">
+        <a href="index.html">Обзор</a>
+        <a href="signs.html">Признаки</a>
+        <a href="plan.html">План</a>
+        <a href="resources.html">Советы</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container content" tabindex="-1">
+    <article class="article card">
+      <header class="article-header">
+        <h1>Как распознать выгорание: признаки, которые нельзя игнорировать</h1>
+        <p class="lead">Не отдельный симптом, а их сочетание — ключ к распознаванию.</p>
+      </header>
+
+      <section class="section">
+        <h2>Эмоциональные сигналы</h2>
+        <ul class="bullets">
+          <li>Хроническая раздражительность и цинизм</li>
+          <li>Отстранённость от коллег, друзей и хобби</li>
+          <li>Чувство безразличия и потеря смысла</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Физические и когнитивные симптомы</h2>
+        <div class="grid">
+          <div class="card-mini"><h4>Сон</h4><p>Неспокойный сон или невозможность восстановиться после сна.</p></div>
+          <div class="card-mini"><h4>Тело</h4><p>Частые простуды, головные боли, мышечное напряжение.</p></div>
+          <div class="card-mini"><h4>Ум</h4><p>Туман в голове, медленные реакции, забывчивость.</p></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Быстрый самотест (3 вопроса)</h2>
+        <ol class="steps">
+          <li>Чувствуете ли вы постоянную усталость, даже после отдыха?</li>
+          <li>Потеряли ли вы интерес к тому, что раньше радовало?</li>
+          <li>Стал ли ваш рабочий/учебный результат падать?</li>
+        </ol>
+        <p class="muted">Если на большинство вопросов — да, пора действовать (план на странице «План»).</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><p>© <span id="year"></span> SanArticles</p></div></footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){ const pre=document.getElementById('preloader'), MIN=450, s=Date.now(); function hide(){const d=Math.max(0,MIN-(Date.now()-s)); setTimeout(()=>{pre.classList.add('hidden'); document.body.classList.add('loaded'); document.getElementById('content').focus();},d)} if(document.readyState==='complete') hide(); else window.addEventListener('load',hide) })();
+  </script>
+</body>
+</html>
